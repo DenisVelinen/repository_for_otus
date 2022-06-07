@@ -1,8 +1,6 @@
 const number = prompt('Enter any but three-digit number');
 let sum = 0;
 
-console.log(number.length);
-
 if (number.length < 3) {
   console.log(`You have entered less than 3 digits`);
 } else if (number.length > 3) {
