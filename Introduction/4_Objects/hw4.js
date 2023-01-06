@@ -1,13 +1,13 @@
-const age = +prompt('Enter a number');
+const age = +prompt("Enter a number");
 
-let user = {
-  name: 'John',
-  age
+const user = {
+  name: "John",
+  age,
 };
 
-let admin = Object.assign({}, user, {role: 'admin'});
+const admin = { ...user, role: "admin" };
 
-let {name, age:years, role} = admin;
+const { name, age: years, role } = admin;
 
 console.log(user);
 console.log(admin);

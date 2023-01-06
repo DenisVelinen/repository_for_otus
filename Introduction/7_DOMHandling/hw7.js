@@ -1,33 +1,22 @@
-const buttonSendText = document.querySelector('.buttonSendText');
-const userInputText = document.querySelector('.userInputText')
-
-buttonSendText.addEventListener('click', clickOnSendButton);
-userInputText.addEventListener('input', showButton);
-
-function clickOnSendButton() {
-  const userText = getTextFromInput();
-  addParagraph(userText);
-  clearInput();
-  hideButton();
-  removeParagraph();
-}
+const buttonSendText = document.querySelector(".buttonSendText");
+const userInputText = document.querySelector(".userInputText");
 
 function getTextFromInput() {
-  const userText = document.querySelector('.userInputText');
+  const userText = document.querySelector(".userInputText");
   return userText.value;
 }
 
 function addParagraph(text) {
-  const paragraph = document.createElement('p');
+  const paragraph = document.createElement("p");
   paragraph.innerText = text;
 
-  const content = document.querySelector('.content');
+  const content = document.querySelector(".content");
   content.append(paragraph);
 }
 
 function clearInput() {
-  const input = document.querySelector('.userInputText');
-  input.value = '';
+  const input = document.querySelector(".userInputText");
+  input.value = "";
 }
 
 function showButton() {
@@ -39,8 +28,19 @@ function hideButton() {
 }
 
 function removeParagraph() {
-  const allParagraphs = document.querySelectorAll('p');
+  const allParagraphs = document.querySelectorAll("p");
   if (allParagraphs.length > 5) {
     allParagraphs[0].remove();
   }
 }
+
+function clickOnSendButton() {
+  const userText = getTextFromInput();
+  addParagraph(userText);
+  clearInput();
+  hideButton();
+  removeParagraph();
+}
+
+buttonSendText.addEventListener("click", clickOnSendButton);
+userInputText.addEventListener("input", showButton);

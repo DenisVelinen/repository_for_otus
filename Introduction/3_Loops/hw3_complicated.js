@@ -1,4 +1,4 @@
-const number = +prompt('Enter any number');
+const number = +prompt("Enter any number");
 let countOfNumbers = 0;
 let sum = 0;
 
@@ -9,4 +9,8 @@ for (let i = 1; i <= number; i++) {
   }
 }
 
-console.log(`The arithmetic mean of all odd numbers from 1 to ${number} is ${sum / countOfNumbers}`);
+console.log(
+  `The arithmetic mean of all odd numbers from 1 to ${number} is ${
+    sum / countOfNumbers
+  }`
+);
