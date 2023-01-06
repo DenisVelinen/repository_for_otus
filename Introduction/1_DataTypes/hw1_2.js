@@ -1,5 +1,5 @@
-const firstText = prompt('Enter any letters or words');
-const secondText = prompt('Enter any other letters or words');
+const firstText = prompt("Enter any letters or words");
+const secondText = prompt("Enter any other letters or words");
 
 const allPhrase = firstText + secondText;
 
